@@ -1,0 +1,13 @@
+[
+  {"question": "What is the notice period in the NDA signed with Vendor X?", "answer": "thirty (30) days", "document": "nda_vendor_x.pdf", "page": 1},
+  {"question": "How long is the NDA term?", "answer": "two years", "document": "nda_vendor_x.pdf", "page": 1},
+  {"question": "Which state governs the NDA?", "answer": "Delaware", "document": "nda_vendor_x.pdf", "page": 1},
+  {"question": "What is the liability cap in the MSA with Vendor Y?", "answer": "INR 1 crore", "document": "msa_vendor_y.pdf", "page": 1},
+  {"question": "What is the uptime commitment in the Vendor Y MSA?", "answer": "99.5 percent", "document": "msa_vendor_y.pdf", "page": 1},
+  {"question": "What cure period applies to material breach termination?", "answer": "fifteen (15) day", "document": "msa_vendor_y.pdf", "page": 1},
+  {"question": "How long are employee records retained?", "answer": "seven years", "document": "policy_retention.pdf", "page": 1},
+  {"question": "How long are finance records retained?", "answer": "eight years", "document": "policy_retention.pdf", "page": 1},
+  {"question": "Who must approve policy exceptions in writing?", "answer": "General Counsel", "document": "policy_retention.pdf", "page": 1},
+  {"question": "Can the NDA be assigned without consent?", "answer": "No", "document": "nda_vendor_x.pdf", "page": 1}
+]
+
