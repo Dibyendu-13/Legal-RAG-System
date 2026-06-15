@@ -59,7 +59,7 @@ make all
 
 Optional walkthrough recording:
 
-- Loom: `https://www.loom.com/share/9e6d6c1269e94ab387b223212254bbd4`
+- Loom: [Recording](https://www.loom.com/share/9e6d6c1269e94ab387b223212254bbd4)
 
 ## Notes
 
