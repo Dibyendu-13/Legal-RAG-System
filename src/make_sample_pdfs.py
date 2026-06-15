@@ -2,9 +2,6 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
-
 from .utils import PDF_DIR
 
 
@@ -43,6 +40,9 @@ DOCS = {
 
 
 def make_pdf(path: Path, title: str, paragraphs: list[str]) -> None:
+    from reportlab.lib.pagesizes import letter
+    from reportlab.pdfgen import canvas
+
     c = canvas.Canvas(str(path), pagesize=letter)
     width, height = letter
     y = height - 72
@@ -92,4 +92,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

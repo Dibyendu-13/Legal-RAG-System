@@ -4,8 +4,10 @@ import time
 
 import joblib
 
-from .data import LABELS
-from ..utils import DATA_DIR
+from src.classifier.data import LABELS
+from src.utils import DATA_DIR
+
+__test__ = False
 
 
 def main():
@@ -27,4 +29,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

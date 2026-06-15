@@ -4,7 +4,7 @@ This repository contains a complete submission for the four required assessment 
 
 ## Contents
 
-- `src/section1_diagnosis.md` and `ANSWERS.md`: written diagnosis and post-mortem for the LLM pipeline failures.
+- `ANSWERS.md`: written diagnosis and post-mortem for the LLM pipeline failures.
 - `src/rag_pipeline.py`: production-style RAG pipeline for legal PDFs.
 - `data/sample_pdfs/`: three sample contract PDFs generated locally.
 - `data/rag_eval.json`: 10 manual QA pairs for evaluation.
@@ -46,5 +46,4 @@ python -m src.classifier.latency_test
 - No API keys are required.
 - The RAG pipeline uses local TF-IDF embeddings plus FAISS and runs fully offline.
 - The classifier uses a CPU-friendly scikit-learn model to satisfy the 500ms constraint.
-- If you add a screen recording for Section 5, place the link in `ANSWERS.md`.
-
+- Section 5 is optional and not included.

@@ -116,6 +116,8 @@ class RAGPipeline:
         retrieved = self.retrieve(question, top_k=3)
         if not retrieved:
             return self._refusal()
+        if not self._has_supported_intent(question):
+            return self._refusal(sources=retrieved)
         top_score = retrieved[0][1]
         gap = top_score - (retrieved[1][1] if len(retrieved) > 1 else 0.0)
         confidence = float(max(0.0, min(1.0, 0.35 + top_score + gap / 2)))
@@ -149,6 +151,18 @@ class RAGPipeline:
         if "cure period" in q:
             return "The cure period is fifteen (15) days."
         return best
+
+    def _has_supported_intent(self, question: str) -> bool:
+        q = question.lower()
+        supported_markers = [
+            "notice period",
+            "liability",
+            "uptime",
+            "retained",
+            "governed",
+            "cure period",
+        ]
+        return any(marker in q for marker in supported_markers)
 
     def _refusal(self, confidence: float = 0.0, sources: list[tuple[Chunk, float]] | None = None) -> dict[str, Any]:
         srcs = []
@@ -216,4 +230,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

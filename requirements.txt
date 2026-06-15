@@ -5,4 +5,4 @@ pypdf
 reportlab
 faiss-cpu
 joblib
-
+pytest
