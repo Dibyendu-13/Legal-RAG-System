@@ -14,7 +14,7 @@ This repository contains a complete submission for the four required assessment 
 ## Setup
 
 The project is self-contained and uses local libraries only.
-The RAG sample PDFs, vector index, and classifier artifacts are generated locally during the build/train steps.
+The RAG corpus is sourced from the uploaded PDFs in `data/sample_pdfs/`, and the vector index and classifier artifacts are generated locally during the build/train steps.
 
 ### Recommended environment
 
@@ -51,6 +51,6 @@ make all
 ## Notes
 
 - No API keys are required.
-- The RAG pipeline uses local TF-IDF embeddings plus FAISS and runs fully offline.
+- The RAG pipeline uses local TF-IDF embeddings plus FAISS over the uploaded legal PDFs and runs fully offline.
 - The classifier uses a CPU-friendly scikit-learn model to satisfy the 500ms constraint.
 - Section 5 is optional and not included.
