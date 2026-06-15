@@ -17,7 +17,7 @@ def test_rag_query_returns_sources():
 
 def test_rag_refuses_out_of_scope_question():
     pipeline = RAGPipeline.load()
-    result = pipeline.query("What is the termination fee for Vendor Z's ad hoc pilot?")
+    result = pipeline.query("What is the late delivery penalty for Vendor Z's ad hoc pilot?")
     assert "grounded evidence" in result["answer"].lower() or result["confidence"] < 0.45
 
 
@@ -29,4 +29,3 @@ def test_rag_eval_script_runs():
         text=True,
     )
     assert "precision@3=" in out.stdout
-
